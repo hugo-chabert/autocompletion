@@ -2,22 +2,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Recherche</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-    <!-- link css-->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-
-    <!-- link js-->
-    <script src="script.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
 </head>
 
 <body>
     <main>
+        <form action="recherche.php" method="get">
         <div class="search-container">
-            <input type="text" name="fruit" id="fruit" placeholder="Rechercher une ville">
+            <input type="text" name="ville" id="ville" placeholder="Rechercher une ville">
             <div class="suggestions">
                 <ul></ul>
             </div>
         </div>
+    </form>
     </main>
 </body>
 
