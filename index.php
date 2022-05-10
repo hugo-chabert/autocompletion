@@ -9,7 +9,7 @@
 
 <body>
     <main>
-        <form action="recherche.php" method="get">
+        <form action="pages/recherche.php" method="get">
         <div class="search-container">
             <input type="text" name="ville" id="ville" placeholder="Rechercher une ville">
             <div class="suggestions">

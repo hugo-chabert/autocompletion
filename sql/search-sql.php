@@ -5,7 +5,7 @@
     ]);
     $nomVille = isset($_POST['ville'])? strip_tags($_POST['ville']) :'';
 
-    $query = $pdo->prepare("SELECT * FROM villes WHERE nom LIKE '$nomVille%' ORDER BY id DESC");
+    $query = $pdo->prepare("SELECT * FROM villes WHERE nom LIKE '%$nomVille%' ORDER BY id DESC");
     $query->setFetchMode(\PDO::FETCH_ASSOC);
     $query->execute();
     $user=$query->fetchall();
