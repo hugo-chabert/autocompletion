@@ -11,7 +11,7 @@
     <main>
         <form action="pages/recherche.php" method="get">
         <div class="search-container">
-            <input type="text" name="ville" id="ville" placeholder="Rechercher une ville">
+            <input type="text" name="search" id="search" placeholder="Rechercher une ville">
             <div class="suggestions">
                 <ul></ul>
             </div>

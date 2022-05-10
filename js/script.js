@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (){
 
     let form = document.querySelector("form");
-    const input = document.querySelector('#ville');
+    const input = document.querySelector('#search');
     const suggestions = document.querySelector('.suggestions ul');
     let donnee = new FormData(form);
     // input.addEventListener("keyup", function (e) {
