@@ -1,3 +1,15 @@
+<?php
+$nomVille = isset($_GET['search'])? strip_tags($_GET['search']) :'';
+$bdd = new PDO("mysql:host=localhost;dbname=autocompletion",'root','root');
+$bdd->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
+$bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+
+$sql = "SELECT * FROM villes WHERE nom LIKE '%$nomVille%' ORDER BY id DESC";
+$result = $bdd->prepare($sql);
+$result->execute();
+$resultatRecherche = $result->fetchAll();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,15 +21,14 @@
 </head>
 <body>
     <?php
-    require_once 'header.php';?>
-        <div class="suggestions">
-            <ul></ul>
-        </div>
-        <div class="suggestions2">
-            <ul></ul>
-        </div>
+    require_once 'header.php';
+        if(isset($nomVille)){
+            foreach($resultatRecherche as $resultatRecherches): ?>
+            <div>
+                <?= $resultatRecherches['nom']; ?><br>
+            </div>
+            <?php endforeach;
+        } ?>
     </main>
 </body>
 </html>
-
-

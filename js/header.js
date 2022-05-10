@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function (){
     const suggestions2 = document.querySelector('.suggestions2 ul');
     let donnee = new FormData(form);
     // input.addEventListener("keyup", function (e) {
-        fetch('../sql/header-sql.php', {
+        fetch('../sql/search-sql.php', {
             method: 'POST',
             body: donnee,
         })
