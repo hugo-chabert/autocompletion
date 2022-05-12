@@ -16,6 +16,8 @@ $villes = $result->fetchAll();
 <head>
     <meta charset="UTF-8">
     <script src="../js/header.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../css/element.css" />
+    <link rel="stylesheet" type="text/css" href="../css/root.css" />
     <title>Element</title>
 </head>
 <body>
@@ -24,8 +26,8 @@ $villes = $result->fetchAll();
     <main><?php
         if(isset($idVille)){
             foreach($villes as $v): ?>
-            <div>
-                <h1><?= $v['nom'] ?></h1>
+            <div class="container-element">
+                <h1>This is <?= $v['nom'] ?></h1>
             </div>
             <?php endforeach;
         } ?>
