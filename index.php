@@ -20,6 +20,7 @@
             </div>
             </form>
         </div>
+        <a href="https://github.com/hugo-chabert/oclock"><img src="github.png" class="img"></a>
     </main>
 </body>
 </html>
