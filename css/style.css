@@ -1,27 +1,11 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 :focus {
-  outline: #e65c00 auto 5px;
+  outline: var(--Color1-) auto 5px;
 }
 
 body {
-  font-family: sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #e65c00;
-  background: -webkit-gradient(linear, left top, right top, from(#f9d423), to(#e65c00));
-  background: linear-gradient(to right, #f9d423, #e65c00);
+  font-family: 'Roboto', sans-serif;
+  background: var(--Color1-);
+  background: linear-gradient(to right, var(--Color2-), var(--Color1-));
 }
 
 input {
@@ -54,8 +38,7 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   max-height: 200px;
   overflow-y: auto;
 }
@@ -71,10 +54,22 @@ ul li {
 }
 
 ul li:hover {
-  background-color: #e65c00;
+  background-color: var(--Color1-);
 }
 
 input {
-  border-bottom: 2px solid #e65c00;
+  border-bottom: 2px solid var(--Color1-);
 }
-/*# sourceMappingURL=style.css.map */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  margin-bottom: 5%;
+  margin-top: 2%;
+  text-align: center;
+}

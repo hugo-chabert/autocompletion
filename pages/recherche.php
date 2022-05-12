@@ -15,18 +15,24 @@ $villes = $result->fetchAll();
 <head>
     <meta charset="UTF-8">
     <script src="../js/header.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../css/recherche.css" />
+    <link rel="stylesheet" type="text/css" href="../css/root.css" />
     <title>Recherche</title>
 </head>
 <body>
     <?php
-    require_once 'header.php';
-        if(isset($nomVille)){
-            foreach($villes as $v): ?>
-            <div>
-                <a href="element.php?id=<?= $v['id']?>"> <?= $v['nom']; ?></a><br>
-            </div>
-            <?php endforeach;
-        } ?>
+    require_once 'header.php';?>
+    <main>
+        <div class="container-recherche">
+            <?php
+            if(isset($nomVille)){
+                foreach($villes as $v): ?>
+                <div class="ville">
+                    <a href="element.php?id=<?= $v['id']?>"> <?= $v['nom']; ?></a><br>
+                </div>
+                <?php endforeach;
+            } ?>
+        </div>
     </main>
 </body>
 </html>

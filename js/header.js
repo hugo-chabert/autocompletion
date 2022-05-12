@@ -109,8 +109,17 @@ document.addEventListener("DOMContentLoaded", function (){
                     suggestions.innerHTML = '';
                     suggestions.classList.remove('has-suggestions');
                 }
+
+                function useSuggestion2(e) {
+                    input.value = e.target.innerText;
+                    (document.location.href = `recherche.php?search=${input.value}`)
+                    input.focus();
+                    suggestions2.innerHTML = '';
+                    suggestions2.classList.remove('has-suggestions');
+                }
                 input.addEventListener('keyup', searchHandler);
                 suggestions.addEventListener('click', useSuggestion);
+                suggestions2.addEventListener('click', useSuggestion2);
             })
             })
         // })
