@@ -1,6 +1,6 @@
 <?php
 $idVille = isset($_GET['id'])? strip_tags($_GET['id']) :'';
-$bdd = new PDO("mysql:host=localhost;dbname=autocompletion",'root','root');
+$bdd = new PDO("mysql:host=localhost;dbname=hugo-chabert_autocompletion",'HC-auto','autocompletion');
 $bdd->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
 $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
